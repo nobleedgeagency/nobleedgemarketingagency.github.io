@@ -18,7 +18,6 @@
             line-height: 1.6;
             scroll-behavior: smooth;
         }
-        /* Barre de navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -53,20 +52,8 @@
         .menu.active {
             display: block;
         }
-        /* Animation du logo */
         #logo {
             transition: opacity 0.3s ease;
-        }
-        /* Animation du menu burger */
-        @media screen and (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                gap: 20px;
-            }
-            .burger-menu {
-                display: block;
-            }
         }
         /* Animation de l'Hero */
         .hero {
@@ -140,7 +127,6 @@
             50% { width: 50%; }
             100% { width: 0; }
         }
-        /* Animation des éléments */
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -158,11 +144,22 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+            }
+            .burger-menu {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="navbar">
-        <img id="logo" src="https://via.placeholder.com/150" alt="Noble Edge Logo">
+        <img id="logo" src="images/logo.png" alt="Noble Edge Logo">
         <div class="menu">
             <a href="#about">À propos</a>
             <a href="#services">Services</a>
